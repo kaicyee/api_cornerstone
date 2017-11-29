@@ -14,10 +14,18 @@
     padding-top: 20px;
   }
 
+  .user_input {
+    width: 300px;
+    border: 1px solid #828282;
+    border-radius: 4px;
+    margin: 20px;
+    padding: 0px 9px 9px 9px;
+  }
+
   .zippy-content {
     width: 300px;
-    border: 1px solid #666666;
+    border: 1px solid #828282;
     margin: 20px;
-    padding: 0px 19px 0px 19px;
+    padding: 0px 9px 0px 9px;
     border-radius: 4px;
   }
