@@ -4,22 +4,11 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Traffic layer</title>
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 500px;
-        width: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding-top: 20px;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="index.css">
   </head>
   <body>
+
+    <main role="main">
     <div id="map"></div>
     <div class="zippy-content" style="margin-top: 0px; transition: margin-top 0.218s ease-out 0s; overflow: auto;">
   <h3>Traffic Color Legend</h3>
@@ -36,6 +25,7 @@
 
   <h3>Traffic incident symbols</h3>
 
+<div id="legend">
   <p>Traffic incidents include these types of delays:</p>
 
   <ul>
@@ -47,6 +37,7 @@
 
   <p><strong>Note</strong>: For road closures, you'll see a dotted red line where the road is closed.</p>
 </div>
+</main>
 
     <script>
       function initMap() {
