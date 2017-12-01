@@ -4,18 +4,30 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Weather Traffic App</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="index.css">
   </head>
-  <body>
 
     <main role="main">
-    <div id="map"></div>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
 
-    <div class="user_input">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              Location search
+            </div>
+            <div class="panel-body">
+              Basic panel example
+            </div>
+          </div>
+
+          <div class="user_input">
       <h3>Location Search</h3>
         <form action="#" class="js-search-form">
           <label for="query"></label>
-          <input type="text" class="js-query" name="query" aria-labelledby="query">
+          <input id="pac-input" type="text" class="controls" placeholder="Search Box" name="query" aria-labelledby="query">
           <button type="submit" id="query" name="query">Search</button>
           <!-- both input and the search button need some kind of aria label -->
         </form>
@@ -40,10 +52,15 @@
       </ul>
       <p><strong>Note</strong>: For road closures, you'll see a dotted red line where the road is closed.</p>
     </div>
-    
+        </div><!-- /.col-md-3 -->
+        <div class="col-md-9">
+          <div id="map"></div>
+        </div><!-- /.col-md-9 -->
+      </div><!-- /.row -->
+    </div><!-- /.container -->
 </main>
 
-    <script>
+<!--     <script>
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 13,
@@ -53,7 +70,7 @@
         var trafficLayer = new google.maps.TrafficLayer();
         trafficLayer.setMap(map);
       }
-    </script>
+    </script> -->
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPNibYagLWXCaPAu2E1TwoOjQGBJsQNtc&callback=initMap">
     </script>
