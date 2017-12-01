@@ -15,11 +15,11 @@
   }
 
   .user_input {
-    width: 300px;
-    border: 1px solid #828282;
+    width: 129px;
+    /*border: 1px solid #828282;*/
     border-radius: 4px;
-    margin: 20px;
-    padding: 0px 9px 9px 9px;
+    /*margin: 20px;*/
+    /*padding: 0px 9px 9px 9px;*/
   }
 
   .zippy-content {
@@ -62,10 +62,10 @@
         font-family: Roboto;
         font-size: 15px;
         font-weight: 300;
-        margin-left: 12px;
-        padding: 0 11px 0 13px;
+        /*margin-left: 12px;*/
+        padding: 0 11px 0 6px;
         text-overflow: ellipsis;
-        width: 400px;
+        width: 228px;
       }
 
       #pac-input:focus {
