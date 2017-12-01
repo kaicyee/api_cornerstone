@@ -4,11 +4,12 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Weather Traffic App</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">  
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="index.css">
   </head>
 
-    <main role="main">
+  <main role="main">
   <body>
     <div class="container">
       <div class="row">
@@ -16,61 +17,29 @@
 
           <div class="panel panel-default">
             <div class="panel-heading">
-              Location search
+              <p><strong>Location search</strong></p>
+            <div class="user_input">
+              <form action="#" class="js-search-form">
+              <label for="query"></label>
+              <input id="pac-input" type="text" class="controls" placeholder="Search Box" name="query" aria-labelledby="query">
+              <button type="submit" id="query" name="query">Search</button>
+              <!-- both input and the search button need some kind of aria label -->
+              </form>
+            </div>
             </div>
             <div class="panel-body">
-              Basic panel example
+              <p><strong>Legend</strong></p>
+              <p>The Inclement Weather Map App displays the effects of inclement weather on driving conditions.</p>
             </div>
           </div>
-
-          <div class="user_input">
-      <h3>Location Search</h3>
-        <form action="#" class="js-search-form">
-          <label for="query"></label>
-          <input id="pac-input" type="text" class="controls" placeholder="Search Box" name="query" aria-labelledby="query">
-          <button type="submit" id="query" name="query">Search</button>
-          <!-- both input and the search button need some kind of aria label -->
-        </form>
-    </div>
-
-    <div class="zippy-content" style="margin-top: 0px; transition: margin-top 0.218s ease-out 0s; overflow: auto;">
-      <h3>Traffic Color Legend</h3>
-      <p>The color code shows you the speed of traffic on the road.</p>
-      <ul>
-        <li><strong>Green</strong>: No traffic delays.</li>
-        <li><strong>Orange</strong>: Medium amount of traffic.</li>
-        <li><strong>Red</strong>: Traffic delays. The darker the red, the slower the speed of traffic on the road.</li>
-      </ul>
-      <p><strong>Note</strong>: Gray or blue lines on the map show your routes.</p>
-      <h3>Traffic incident symbols</h3>
-      <p>Traffic incidents include these types of delays:</p>
-      <ul>
-        <li>Crashes&nbsp;&nbsp;<img src="assets/crash.png" alt="Accidents" title="Accidents" width="18" height="18"></li>
-        <li>Construction&nbsp;&nbsp;<img src="assets/construction.png" alt="Construction" title="Construction" width="18" height="18"></li>
-        <li>Road closures&nbsp;&nbsp;<img src="assets/construction.png" alt="Road closures" title="Road closures" width="18" height="18"></li>
-        <li>Other incidents&nbsp;&nbsp;<img src="assets/other_accidents.png" alt="Other incidents" title="Other incidents" width="18" height="18"></li>
-      </ul>
-      <p><strong>Note</strong>: For road closures, you'll see a dotted red line where the road is closed.</p>
-    </div>
         </div><!-- /.col-md-3 -->
         <div class="col-md-9">
           <div id="map"></div>
         </div><!-- /.col-md-9 -->
       </div><!-- /.row -->
     </div><!-- /.container -->
-</main>
+    </main>
 
-<!--     <script>
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 13,
-          center: {lat: 38.889931, lng: -77.009003}
-        });
-
-        var trafficLayer = new google.maps.TrafficLayer();
-        trafficLayer.setMap(map);
-      }
-    </script> -->
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPNibYagLWXCaPAu2E1TwoOjQGBJsQNtc&callback=initMap">
     </script>
