@@ -1,48 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"> </script>  <!-- this is the proper jQuery cdn -->
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>Weather Traffic App</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">  
+    <title>The Inclement Weather Traffic App</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="index02.css">
   </head>
-
-  <main role="main">
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
+    <div class="col-md-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <p><strong>Location search</strong></p>
+          <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+          <label><input type="checkbox" id="traffic" onclick="check()" />Traffic</label>
+          <label><input type="checkbox" id="transit" onclick="check()" />Public Transportation</label>
+        </div>
+        <div class="panel-body">
+          <p><strong>Legend</strong></p>
+          <p>The Inclement Weather Map App displays the effects of inclement weather on driving conditions.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div id="map"></div>
+    </div>  
 
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <p><strong>Location search</strong></p>
-            <div class="user_input">
-              <form action="#" class="js-search-form">
-              <label for="query"></label>
-              <input id="pac-input" type="text" class="controls" placeholder="Search Box" name="query" aria-labelledby="query">
-              <button type="submit" id="query" name="query">Search</button>
-              <!-- both input and the search button need some kind of aria label -->
-              </form>
-            </div>
-            </div>
-            <div class="panel-body">
-              <p><strong>Legend</strong></p>
-              <p>The Inclement Weather Map App displays the effects of inclement weather on driving conditions.</p>
-            </div>
-          </div>
-        </div><!-- /.col-md-3 -->
-        <div class="col-md-9">
-          <div id="map"></div>
-        </div><!-- /.col-md-9 -->
-      </div><!-- /.row -->
-    </div><!-- /.container -->
-    </main>
-
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPNibYagLWXCaPAu2E1TwoOjQGBJsQNtc&callback=initMap">
-    </script>
-    <script type="text/javascript" src="index.js"></script> 
+    <script type="text/javascript" src="index02.js"></script> 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPNibYagLWXCaPAu2E1TwoOjQGBJsQNtc&libraries=places&callback=initAutocomplete"
+         async defer></script>
   </body>
 </html>

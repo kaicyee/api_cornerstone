@@ -1,36 +1,47 @@
 /* Always set the map height explicitly to define the size of the div
-* element that contains the map. */
+       * element that contains the map. */
+      #map {
+        height: 75%;
+        width: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        font-family: 'Roboto', sans-serif;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
 
-  #map {
-    height: 500px;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  /* Optional: Makes the sample page fill the window. */
-  
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding-top: 20px;
-  }
+      .col-md-3 {
+          height: 100%;
+          background-color: yellow;
+      }
 
-  .user_input {
-    width: 129px;
-    /*border: 1px solid #828282;*/
-    border-radius: 4px;
-    /*margin: 20px;*/
-    /*padding: 0px 9px 9px 9px;*/
-  }
+       .col-md-9 {
+          height: 100%;
+          background-color: yellowgreen;
+      }
 
-  .zippy-content {
-    width: 300px;
-    border: 1px solid #828282;
-    margin: 20px;
-    padding: 0px 9px 0px 9px;
-    border-radius: 4px;
-  }
 
-  .pac-card {
+      #description {
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+      }
+
+      #infowindow-content .title {
+        font-weight: bold;
+      }
+
+      #infowindow-content {
+        display: none;
+      }
+
+      #map #infowindow-content {
+        display: inline;
+      }
+
+      .pac-card {
         margin: 10px 10px 0 0;
         border-radius: 2px 0 0 2px;
         box-sizing: border-box;
@@ -63,11 +74,24 @@
         font-size: 15px;
         font-weight: 300;
         /*margin-left: 12px;*/
-        padding: 0 11px 0 6px;
+        padding: 0 0px 0 7px;
         text-overflow: ellipsis;
-        width: 228px;
+        width: 88%;
+        border-radius: 4px;
+        border: 1px solid #8d8b8b;
       }
 
       #pac-input:focus {
         border-color: #4d90fe;
+      }
+
+      #title {
+        color: #fff;
+        background-color: #4d90fe;
+        font-size: 25px;
+        font-weight: 500;
+        padding: 6px 12px;
+      }
+      #target {
+        width: 345px;
       }
