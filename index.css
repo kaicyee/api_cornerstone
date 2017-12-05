@@ -84,13 +84,17 @@
       #pac-input:focus {
         border-color: #4d90fe;
       }
+      
+      input[type="checkbox"] {
+        margin: 13px 4px 0px;
+      }
 
-      #title {
+      /* #title {
         color: #fff;
         background-color: #4d90fe;
         font-size: 25px;
         font-weight: 500;
-        padding: 6px 12px;
+        padding: 6px 12px; */
       }
       #target {
         width: 345px;
