@@ -8,6 +8,19 @@ function initAutocomplete() {
 
   var trafficLayer = new google.maps.TrafficLayer();
   var transitLayer = new google.maps.TransitLayer();
+  var myMapType = new google.maps.ImageMapType({
+        getTileUrl: function(coord, zoom) {
+          return "http://maps.owm.io:8099/5a26dc311c32650001d73e33/" + 
+                 zoom + "/" + coord.x + "/" + coord.y + "?hash=5";
+        },
+        tileSize: new google.maps.Size(256, 256),
+        maxZoom: 8,
+        minZoom: 0,
+        name: 'mymaptype'
+      });
+
+      // map.overlayMapTypes.insertAt(0, myMapType);
+    // }
 
     $('#traffic').click(function(){
     if(document.getElementById('traffic').checked)
@@ -23,10 +36,13 @@ function initAutocomplete() {
       {transitLayer.setMap(null);}
     });
 
-
-  // This displays the traffic layer properly
-  // var trafficLayer = new google.maps.TrafficLayer();
-  //       trafficLayer.setMap(map);
+    $('#weather').click(function(){
+    if(document.getElementById('weather').checked)
+      {map.overlayMapTypes.insertAt(0, myMapType);}
+    else
+      // This line is not working
+      {map.overlayMapTypes.insertAt(null);}
+    });
 
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
