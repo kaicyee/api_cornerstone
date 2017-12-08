@@ -7,21 +7,18 @@
     <title>The Inclement Weather Traffic App</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="index02.css">
   </head>
   <body>
     <div class="col-md-3">
       <div class="panel panel-default">
         <div class="panel-heading">
           <p><strong>Location search</strong></p>
-          <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+          <p>The Inclement Weather Map App displays the effects of inclement weather on driving conditions.</p>
+          <input id="pac-input" class="controls" type="text" placeholder="Search Location">
           <label><input type="checkbox" id="traffic" onclick="check()" />Traffic</label>
           <label><input type="checkbox" id="transit" onclick="check()" />Public Transportation</label>
           <label><input type="checkbox" id="weather" onclick="check()" />Weather Map</label>
-        </div>
-        <div class="panel-body">
-          <p><strong>Legend</strong></p>
-          <p>The Inclement Weather Map App displays the effects of inclement weather on driving conditions.</p>
         </div>
       </div>
     </div>
@@ -29,7 +26,7 @@
       <div id="map"></div>
     </div>  
 
-    <script type="text/javascript" src="index.js"></script> 
+    <script type="text/javascript" src="index02.js"></script> 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPNibYagLWXCaPAu2E1TwoOjQGBJsQNtc&libraries=places&callback=initAutocomplete"
          async defer></script>
   </body>
