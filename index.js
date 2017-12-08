@@ -40,8 +40,8 @@ function initAutocomplete() {
     if(document.getElementById('weather').checked)
       {map.overlayMapTypes.insertAt(0, myMapType);}
     else
-      // This line is not working
-      {map.overlayMapTypes.insertAt(null);}
+      // .clear() works like a champ!
+      {map.overlayMapTypes.clear();}
     });
 
   // Create the search box and link it to the UI element.
