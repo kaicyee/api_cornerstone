@@ -10,22 +10,31 @@
     <link rel="stylesheet" type="text/css" href="index.css">
   </head>
   <body>
-    <div class="col-md-3">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <p><strong>Location search</strong></p>
-          <p>TThe Inclement Weather Map App helps motorists to visualize the effects of inclement weather on driving conditions.</p>
-          <input id="pac-input" class="controls" type="text" placeholder="Search Location">
-          <label><input type="checkbox" id="traffic" />Traffic</label>
-          <label><input type="checkbox" id="transit" />Public Transportation</label>
-          <label><input type="checkbox" id="weather" />Weather Map</label>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-9">
-      <div id="map"></div>
-    </div>  
+  <main role="main"> 
 
+    <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+              <h3>Inclement Weather Map Application</strong></h3>
+              <p>The Inclement Weather Map App helps motorists to visualize the effects of inclement weather on driving conditions.</p>
+              <h4>Search city or address</h4>
+              <label><input id="pac-input" class="controls" type="text" placeholder="Search Location"></label>
+              <h5>Click for traffic, transit or weather conditions</h5>
+              <label><input type="checkbox" id="traffic" />Traffic</label>
+              <label><input type="checkbox" id="transit" />Public Transportation</label>
+              <label><input type="checkbox" id="weather" />Weather Map</label>
+            </div>
+          </div>
+        </div>  
+      <div class="col-md-9">
+        <div id="map"></div>
+      </div>   
+    </div>  <!-- end of row -->
+  </div>  <!-- end of container -->
+  
+  </main>
 <script type="text/javascript" src="index.js"></script> 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPNibYagLWXCaPAu2E1TwoOjQGBJsQNtc&libraries=places&callback=initAutocomplete"
      async defer></script>
